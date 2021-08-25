@@ -7,8 +7,9 @@
 	<meta name="description" content="">
 
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+	
 
 	<link rel="stylesheet" type="text/css" href="/layout.css">
 	<link rel="stylesheet" type="text/css" href="/index.css">
@@ -19,17 +20,34 @@
 	<header>
 		<div class="header-inner">
 			<h1>Events</h1>
-			<div class="user-avatar-container">
-				<div class="user-avatar"></div>
+			<!-- <div class="user-avatar-container">
+				<div class="user-avatar"></div> -->
+				<form id = form>
+					<input type="text" placeholder="Search" id="search"
+					class="search">
+				</form>
 			</div>
 		</div>
 	</header>
-	<div id="root-container">
+	<!-- body -->
 
+	<div id="root-container" class='container'>
+		<H3>CHECK OUT OUR LATEST EVENTS</H3>
+		<br>
+		<div id="events" class='row row-cols-3 g-4'>
+		</div>
+
+		<div class='row justify-content-center'>
+			<div class='col-2 m-4'>
+				<button id="loadMoreButton" onclick='loadMore();' class="btn btn-primary">Load More</button>
+			</div>
+		</div>
 	</div>
+	
 	<footer>
 		<p>Made with ❤️ and 💙 and 💛 and 💜 and 💚</p>
 	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 	<script src="/index.js"></script>
 </body>
 </html>

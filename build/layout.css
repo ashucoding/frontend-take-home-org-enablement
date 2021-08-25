@@ -1,7 +1,21 @@
-/**
+/* *
  * Splash's color schema:
- * https://color.adobe.com/create/color-wheel/?base=2&rule=Custom&selected=2&name=My%20Color%20Theme&mode=hsv&rgbvalues=0,0,0,0.2980392156862745,0.36470588235294116,0.9372549019607843,0.9254901960784314,0.9254901960784314,0.9254901960784314,0.17254901960784313,0.12156862745098039,0.1843137254901961,0.9372549019607843,0.3058823529411765,0.3176470588235294&swatchOrder=0,3,1,4,2
- */
+ * https://color.adobe.com/create/color-wheel/?base=2&rule=Custom&selected=2&name=My%20Color%20Theme&mode=hsv&rgbvalues=0,0,0,0.2980392156862745,0.36470588235294116,0.9372549019607843,0.9254901960784314,0.9254901960784314,0.9254901960784314,0.17254901960784313,0.12156862745098039,0.1843137254901961,0.9372549019607843,0.3058823529411765,0.3176470588235294&swatchOrder=0,3,1,4,2 */
+
+ *{
+    box-sizing: border-box;
+   
+ }
+ .grid-container {
+   display: grid;
+
+  }
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
 
 html, body {
     height: 100%;
@@ -17,9 +31,17 @@ body {
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
 }
+#root-container{
+    display: flexbox;
+}
 
-#root-container {
-    flex-grow: 1;
+#events {
+    display: flex;
+    justify-content: center;
+    
+}
+#loadbtn{
+    display: flex;
 }
 
 header {
@@ -27,6 +49,7 @@ header {
     justify-content: center;
     padding: 1rem 2rem;
     border-bottom: 1px solid #ECECEC;
+    background-color:#5B4CED;
 }
 .header-inner {
     max-width: 1000px;
@@ -38,7 +61,39 @@ h1 {
     flex-grow: 1;
     font-size: 1.5rem;
 }
-.user-avatar {
+.search{
+    background-color: transparent;
+    border: 2px solid #3649a7;
+    padding: 0.5rem 1rem ;
+    border-radius: 50px;
+    font-size: 1rem; 
+    color:#3649a7;
+}
+
+.search:focus{
+    outline: 0;
+    background-color: #5B4CED;
+
+}
+
+.search::placeholder{
+    color: #4F6CF7;
+}
+
+.events{
+    width: 300px;
+}
+
+.events_img{
+    width: 100%;
+}
+
+#loadMoreButton {
+    display: flex;
+    background-color: #5B4CED;
+}
+
+/* .user-avatar {
     width: 3rem;
     height: 3rem;
     background-image: url('https://d24wuq6o951i2g.cloudfront.net/img/events/splash/cat2.png');
@@ -46,7 +101,7 @@ h1 {
     background-size: cover;
     border: 1px solid #ECECEC;
     border-radius: 50%;
-}
+} */
 footer {
     text-align: center;
     padding: 1rem;
