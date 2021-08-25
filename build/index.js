@@ -36,10 +36,12 @@ function buttonOnClick(eventID) {
       document.querySelector('#modal-body-event_start').innerHTML = new Date(data.event.event_start);
       document.querySelector('#modal-body-event_end').innerHTML = new Date(data.event.event_end);
       document.querySelector('#modal-body-description').innerHTML = data.event.description;
+      // data.event.venues.forEach(venue => {
+      // document.querySelector('#modal-body-venue').innerHTML += venue.address;
+      // })
       data.event.sessions.forEach(session => {
         document.querySelector('#modal-body-sessions').innerHTML += session.title;
       })
-      
       myModal.show();
     });
 }
@@ -55,10 +57,15 @@ function addModalHTML() {
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <h3>Description</h3>
+                <h4>Event Details</h4>
+                <h6>Description</h6>
+                <p id="modal-body-description">
+                <h6>Location</h6>
+                <p id="modal-body-venue">
+                <h6>Time</h6>
                 <p id="modal-body-event_start">
                 <p id="modal-body-event_end">
-                <p id="modal-body-description">
+                <h6>Sessions</h6>
                 <p id="modal-body-sessions">
                 </p>
               </div>

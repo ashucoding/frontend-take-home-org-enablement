@@ -50,3 +50,8 @@ The goal of this challenge is to discuss your implementation with you in your ne
 7. Mobile friendly UI.
 
 We're looking forward to your submission! 🚀
+
+
+git add .
+git commit -m 'your message here'
+git push
